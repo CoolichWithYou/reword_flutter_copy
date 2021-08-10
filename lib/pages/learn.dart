@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:syncfusion_flutter_charts/charts.dart';
 
 class Learn extends StatefulWidget {
   const Learn({Key? key}) : super(key: key);
@@ -10,152 +11,191 @@ class Learn extends StatefulWidget {
 class _LearnState extends State<Learn> {
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        SizedBox(height: 16),
-        Padding(
-          padding: const EdgeInsets.all(16.0),
-          child: Column(children: [
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Spaced repetition',
-                style: TextStyle(color: Colors.grey[500]),
+    return Container(
+      //color: Colors.grey[100],
+      child: ListView(
+        children: [
+          SizedBox(height: 16),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Column(children: [
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Spaced repetition',
+                  style: TextStyle(color: Colors.grey[500]),
+                ),
               ),
-            ),
-            SizedBox(height: 16.0),
-            ButtonTheme(
-              minWidth: 200.0,
-              height: 100.0,
-              child: RaisedButton(
-                onPressed: () {},
-                child: Row(
+              SizedBox(height: 16.0),
+              ButtonTheme(
+                minWidth: 200.0,
+                height: 100.0,
+                child: RaisedButton(
+                  onPressed: () {},
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.list,
+                        color: Colors.black,
+                      ),
+                      Text(
+                        '   2 categories chosen',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ],
+                  ),
+                  color: Colors.white,
+                ),
+              ),
+              ButtonTheme(
+                minWidth: 200.0,
+                height: 100.0,
+                child: RaisedButton(
+                  onPressed: () {},
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.plus_one,
+                        color: Colors.red,
+                      ),
+                      Text(
+                        '   Learn new words',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ],
+                  ),
+                  color: Colors.white,
+                ),
+              ),
+              ButtonTheme(
+                minWidth: 200.0,
+                height: 100.0,
+                child: RaisedButton(
+                  onPressed: () {},
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.repeat,
+                        color: Colors.amber,
+                      ),
+                      Text(
+                        '   Review words',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ],
+                  ),
+                  color: Colors.white,
+                ),
+              ),
+              ButtonTheme(
+                minWidth: 200.0,
+                height: 100.0,
+                child: RaisedButton(
+                  onPressed: () {},
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.light,
+                        color: Colors.blue,
+                      ),
+                      Text(
+                        '   Mixed mode',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ],
+                  ),
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16.0),
+              Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  'Extra modes (do not affect your stats)',
+                  style: TextStyle(color: Colors.grey[500]),
+                ),
+              ),
+              SizedBox(height: 16.0),
+              ButtonTheme(
+                minWidth: 200.0,
+                height: 100.0,
+                child: RaisedButton(
+                  onPressed: () {},
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.repeat,
+                        color: Colors.green,
+                      ),
+                      Text(
+                        '   Browse flashcards',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ],
+                  ),
+                  color: Colors.white,
+                ),
+              ),
+              ButtonTheme(
+                minWidth: 200.0,
+                height: 100.0,
+                child: RaisedButton(
+                  onPressed: () {},
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.car_repair_sharp,
+                        color: Colors.black,
+                      ),
+                      Text(
+                        '   Hands-free mode',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                    ],
+                  ),
+                  color: Colors.white,
+                ),
+              ),
+              SizedBox(height: 16.0),
+              Container(
+                height: 440,
+                color: Colors.white,
+                child: Column(
                   children: [
-                    Icon(
-                      Icons.list,
-                      color: Colors.black,
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(children: [
+                        Text(
+                          'Period: ',
+                          style: TextStyle(fontSize: 16),
+                        ),
+                        TextButton(
+                            onPressed: () {},
+                            child: Text(
+                              'in develop',
+                              style:
+                                  TextStyle(color: Colors.blue, fontSize: 16),
+                            ))
+                      ]),
                     ),
-                    Text(
-                      '   2 categories chosen',
-                      style: TextStyle(color: Colors.black),
+                    SfCartesianChart(),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Align(
+                        alignment: Alignment.centerLeft,
+                        child: Text(
+                          'Words being memorized: 0',
+                          style: TextStyle(fontSize: 16),
+                        ),
+                      ),
                     ),
                   ],
                 ),
-                color: Colors.white,
               ),
-            ),
-            ButtonTheme(
-              minWidth: 200.0,
-              height: 100.0,
-              child: RaisedButton(
-                onPressed: () {},
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.plus_one,
-                      color: Colors.red,
-                    ),
-                    Text(
-                      '   Learn new words',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ],
-                ),
-                color: Colors.white,
-              ),
-            ),
-            ButtonTheme(
-              minWidth: 200.0,
-              height: 100.0,
-              child: RaisedButton(
-                onPressed: () {},
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.repeat,
-                      color: Colors.amber,
-                    ),
-                    Text(
-                      '   Review words',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ],
-                ),
-                color: Colors.white,
-              ),
-            ),
-            ButtonTheme(
-              minWidth: 200.0,
-              height: 100.0,
-              child: RaisedButton(
-                onPressed: () {},
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.light,
-                      color: Colors.blue,
-                    ),
-                    Text(
-                      '   Mixed mode',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ],
-                ),
-                color: Colors.white,
-              ),
-            ),
-            SizedBox(height: 16.0),
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                'Extra modes (do not affect your stats)',
-                style: TextStyle(color: Colors.grey[500]),
-              ),
-            ),
-            SizedBox(height: 16.0),
-            ButtonTheme(
-              minWidth: 200.0,
-              height: 100.0,
-              child: RaisedButton(
-                onPressed: () {},
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.repeat,
-                      color: Colors.green,
-                    ),
-                    Text(
-                      '   Browse flashcards',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ],
-                ),
-                color: Colors.white,
-              ),
-            ),
-            ButtonTheme(
-              minWidth: 200.0,
-              height: 100.0,
-              child: RaisedButton(
-                onPressed: () {},
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.car_repair_sharp,
-                      color: Colors.black,
-                    ),
-                    Text(
-                      '   Hands-free mode',
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ],
-                ),
-                color: Colors.white,
-              ),
-            ),
-          ]),
-        ),
-      ],
+            ]),
+          ),
+        ],
+      ),
     );
   }
 }
