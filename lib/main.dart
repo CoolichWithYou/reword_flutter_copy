@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'pages/learn.dart';
+import 'pages/menu.dart';
+import 'pages/vocabulary.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -15,6 +18,8 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int _currentIndex = 0;
+
+  final pages = [Learn(), Vocabulary(), Menu()];
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +41,7 @@ class _HomeState extends State<Home> {
         backgroundColor: Colors.white,
       ),
       bottomNavigationBar: BottomNavigationBar(
+        selectedFontSize: 12,
         currentIndex: _currentIndex,
         type: BottomNavigationBarType.fixed,
         items: [
@@ -64,6 +70,7 @@ class _HomeState extends State<Home> {
           });
         },
       ),
+      body: pages[_currentIndex],
     );
   }
 }
