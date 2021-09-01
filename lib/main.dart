@@ -46,11 +46,12 @@ class _HomeState extends State<Home> {
         type: BottomNavigationBarType.fixed,
         items: [
           BottomNavigationBarItem(
-              icon: Icon(Icons.phone_android_outlined),
-              title: Text(
-                'Learn',
-                style: TextStyle(fontSize: 14),
-              )),
+            icon: Icon(Icons.phone_android_outlined),
+            title: Text(
+              'Learn',
+              style: TextStyle(fontSize: 14),
+            ),
+          ),
           BottomNavigationBarItem(
               icon: Icon(Icons.data_saver_off_outlined),
               title: Text(

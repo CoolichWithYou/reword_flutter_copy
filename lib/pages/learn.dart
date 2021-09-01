@@ -12,7 +12,7 @@ class _LearnState extends State<Learn> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      //color: Colors.grey[100],
+      color: Colors.grey[200],
       child: ListView(
         children: [
           SizedBox(height: 16),
@@ -32,6 +32,9 @@ class _LearnState extends State<Learn> {
                 height: 100.0,
                 child: RaisedButton(
                   onPressed: () {},
+                  shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.vertical(top: Radius.circular(20))),
                   child: Row(
                     children: [
                       Icon(
@@ -39,7 +42,7 @@ class _LearnState extends State<Learn> {
                         color: Colors.black,
                       ),
                       Text(
-                        '   2 categories chosen',
+                        '   0 categories chosen',
                         style: TextStyle(color: Colors.black),
                       ),
                     ],
@@ -91,6 +94,9 @@ class _LearnState extends State<Learn> {
                 minWidth: 200.0,
                 height: 100.0,
                 child: RaisedButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.vertical(bottom: Radius.circular(20))),
                   onPressed: () {},
                   child: Row(
                     children: [
@@ -120,6 +126,9 @@ class _LearnState extends State<Learn> {
                 minWidth: 200.0,
                 height: 100.0,
                 child: RaisedButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.vertical(top: Radius.circular(20))),
                   onPressed: () {},
                   child: Row(
                     children: [
@@ -140,6 +149,9 @@ class _LearnState extends State<Learn> {
                 minWidth: 200.0,
                 height: 100.0,
                 child: RaisedButton(
+                  shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.vertical(bottom: Radius.circular(20))),
                   onPressed: () {},
                   child: Row(
                     children: [
