@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reword_flutter_copy/pages/learnNewWords.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
 import 'categories.dart';
 
@@ -30,7 +31,7 @@ class _LearnState extends State<Learn> {
               SizedBox(height: 16.0),
               ButtonTheme(
                 minWidth: 200.0,
-                height: 100.0,
+                height: 75.0,
                 child: RaisedButton(
                   onPressed: () {
                     Navigator.push(context,
@@ -56,9 +57,14 @@ class _LearnState extends State<Learn> {
               ),
               ButtonTheme(
                 minWidth: 200.0,
-                height: 100.0,
+                height: 75.0,
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => LearnNewWords()));
+                  },
                   child: Row(
                     children: [
                       Icon(
@@ -76,7 +82,7 @@ class _LearnState extends State<Learn> {
               ),
               ButtonTheme(
                 minWidth: 200.0,
-                height: 100.0,
+                height: 75.0,
                 child: RaisedButton(
                   onPressed: () {},
                   child: Row(
@@ -96,7 +102,7 @@ class _LearnState extends State<Learn> {
               ),
               ButtonTheme(
                 minWidth: 200.0,
-                height: 100.0,
+                height: 75.0,
                 child: RaisedButton(
                   shape: RoundedRectangleBorder(
                       borderRadius:
@@ -128,7 +134,7 @@ class _LearnState extends State<Learn> {
               SizedBox(height: 16.0),
               ButtonTheme(
                 minWidth: 200.0,
-                height: 100.0,
+                height: 75.0,
                 child: RaisedButton(
                   shape: RoundedRectangleBorder(
                       borderRadius:
@@ -151,7 +157,7 @@ class _LearnState extends State<Learn> {
               ),
               ButtonTheme(
                 minWidth: 200.0,
-                height: 100.0,
+                height: 75.0,
                 child: RaisedButton(
                   shape: RoundedRectangleBorder(
                       borderRadius:
