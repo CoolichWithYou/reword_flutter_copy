@@ -47,7 +47,7 @@ class _LearnState extends State<Learn> {
                         color: Colors.black,
                       ),
                       Text(
-                        '   0 categories chosen',
+                        '   0 category chosen',
                         style: TextStyle(color: Colors.black),
                       ),
                     ],
