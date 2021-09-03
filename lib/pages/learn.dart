@@ -34,8 +34,22 @@ class _LearnState extends State<Learn> {
                 height: 75.0,
                 child: RaisedButton(
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Categories()));
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Scaffold(
+                          appBar: AppBar(
+                            iconTheme: IconThemeData(color: Colors.black),
+                            title: Text(
+                              'Categories selection',
+                              style: TextStyle(color: Colors.black),
+                            ),
+                            backgroundColor: Colors.white,
+                          ),
+                          body: Categories(),
+                        ),
+                      ),
+                    );
                   },
                   shape: RoundedRectangleBorder(
                       borderRadius:
