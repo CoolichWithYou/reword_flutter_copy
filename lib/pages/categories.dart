@@ -85,16 +85,3 @@ class _CategoriesState extends State<Categories> {
     );
   }
 }
-
-// Scaffold(
-//       appBar: AppBar(
-//         iconTheme: IconThemeData(color: Colors.black),
-//         title: Text(
-//           'Categories selection',
-//           style: TextStyle(color: Colors.black),
-//         ),
-//         backgroundColor: Colors.white,
-//       ),
-//       body: 
-//     );
-
