@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reword_flutter_copy/pages/swipeCards.dart';
 
 class LearnNewWords extends StatefulWidget {
   const LearnNewWords({Key? key}) : super(key: key);
@@ -34,6 +35,7 @@ class _LearnNewWordsState extends State<LearnNewWords> {
         ),
         backgroundColor: Colors.white,
       ),
+      body: Card2(),
     );
   }
 }
