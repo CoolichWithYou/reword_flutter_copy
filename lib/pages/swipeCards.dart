@@ -23,58 +23,83 @@ List<Widget> cards = List.generate(
       ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(16.0),
-        child: Column(
-          children: [
-            Text('Memorizing new word'),
-            SizedBox(
-              height: 8,
-            ),
-            Text('Oxford 3000 - B1'),
-            SizedBox(
-              height: 8,
-            ),
-            Text('Полка'),
-            SizedBox(
-              height: 8,
-            ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(16.0),
-              child: Image.network(
-                images[index],
-                fit: BoxFit.cover,
-                height: 90,
-                width: 160,
+        child: Align(
+          alignment: Alignment.topLeft,
+          child: Column(
+            children: [
+              Text('Memorizing new word'),
+              SizedBox(
+                height: 8,
               ),
-            ),
-            SizedBox(
-              height: 64,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                RaisedButton(onPressed: () {}, child: Icon(Icons.keyboard)),
-                RaisedButton(
-                    onPressed: () {}, child: Icon(Icons.remove_red_eye)),
-                RaisedButton(onPressed: () {}, child: Icon(Icons.window)),
-              ],
-            ),
-            SizedBox(
-              height: 64,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                RaisedButton(
-                  onPressed: () {},
-                  child: Text('Got it'),
+              Text('Oxford 3000 - B1'),
+              SizedBox(
+                height: 8,
+              ),
+              Text('Полка'),
+              SizedBox(
+                height: 8,
+              ),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(16.0),
+                child: Image.network(
+                  images[index],
+                  fit: BoxFit.cover,
+                  height: 90,
+                  width: 160,
                 ),
-                RaisedButton(
-                  onPressed: () {},
-                  child: Text('Missed it'),
-                ),
-              ],
-            ),
-          ],
+              ),
+              SizedBox(
+                height: 64,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: SizedBox(
+                      width: 75.0,
+                      height: 75.0,
+                      child: RaisedButton(
+                          onPressed: () {}, child: Icon(Icons.keyboard)),
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: SizedBox(
+                      width: 75.0,
+                      height: 75.0,
+                      child: RaisedButton(
+                          onPressed: () {}, child: Icon(Icons.remove_red_eye)),
+                    ),
+                  ),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(8.0),
+                    child: SizedBox(
+                        width: 75.0,
+                        height: 75.0,
+                        child: RaisedButton(
+                            onPressed: () {}, child: Icon(Icons.window))),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 64,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  RaisedButton(
+                    onPressed: () {},
+                    child: Text('Got it'),
+                  ),
+                  RaisedButton(
+                    onPressed: () {},
+                    child: Text('Missed it'),
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
