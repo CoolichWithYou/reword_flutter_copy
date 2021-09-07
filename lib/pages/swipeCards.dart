@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:reword_flutter_copy/data/words.dart';
 import 'package:tcard/tcard.dart';
 
-List<String> images = [
-  'https://vmebel.ru/upload/iblock/2e6/2e61bc0ccd1d3fcd3eebe281541c7ee6.jpg',
-];
+// List<String> images = [
+//   'https://vmebel.ru/upload/iblock/2e6/2e61bc0ccd1d3fcd3eebe281541c7ee6.jpg',
+// ];
 
 List<Widget> cards = List.generate(
-  images.length,
+  words.length,
   (int index) {
     return Container(
       decoration: BoxDecoration(
@@ -31,18 +32,18 @@ List<Widget> cards = List.generate(
               SizedBox(
                 height: 8,
               ),
-              Text('Oxford 3000 - B1'),
+              Text('${(words[index].dictionary)}'),
               SizedBox(
                 height: 8,
               ),
-              Text('Полка'),
+              Text('${(words[index].title)}'),
               SizedBox(
                 height: 8,
               ),
               ClipRRect(
                 borderRadius: BorderRadius.circular(16.0),
                 child: Image.network(
-                  images[index],
+                  words[index].image,
                   fit: BoxFit.cover,
                   height: 90,
                   width: 160,
