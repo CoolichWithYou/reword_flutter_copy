@@ -25,9 +25,12 @@ List<Widget> cards = List.generate(
       child: ClipRRect(
         borderRadius: BorderRadius.circular(16.0),
         child: Align(
-          alignment: Alignment.topLeft,
+          alignment: Alignment.topCenter,
           child: Column(
             children: [
+              SizedBox(
+                height: 8,
+              ),
               Text('Memorizing new word'),
               SizedBox(
                 height: 8,
@@ -52,52 +55,14 @@ List<Widget> cards = List.generate(
               SizedBox(
                 height: 64,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                    child: SizedBox(
-                      width: 75.0,
-                      height: 75.0,
-                      child: RaisedButton(
-                          onPressed: () {}, child: Icon(Icons.keyboard)),
-                    ),
-                  ),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                    child: SizedBox(
-                      width: 75.0,
-                      height: 75.0,
-                      child: RaisedButton(
-                          onPressed: () {}, child: Icon(Icons.remove_red_eye)),
-                    ),
-                  ),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(8.0),
-                    child: SizedBox(
-                        width: 75.0,
-                        height: 75.0,
-                        child: RaisedButton(
-                            onPressed: () {}, child: Icon(Icons.window))),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 64,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  RaisedButton(
-                    onPressed: () {},
-                    child: Text('Got it'),
-                  ),
-                  RaisedButton(
-                    onPressed: () {},
-                    child: Text('Missed it'),
-                  ),
-                ],
+              ClipRRect(
+                borderRadius: BorderRadius.circular(8.0),
+                child: SizedBox(
+                  width: 75.0,
+                  height: 75.0,
+                  child: RaisedButton(
+                      onPressed: () {}, child: Icon(Icons.remove_red_eye)),
+                ),
               ),
             ],
           ),
