@@ -1,9 +1,9 @@
 //import 'package:flutter/cupertino.dart';
 
 class Word {
-  final String dictionary;
-  final String image;
-  final String title;
+  String dictionary;
+  String image;
+  String title;
   bool isKnow;
   bool isSwipedOff;
 

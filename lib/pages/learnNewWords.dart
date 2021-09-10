@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reword_flutter_copy/data/words.dart';
 import 'package:reword_flutter_copy/pages/swipeCards.dart';
 
 class LearnNewWords extends StatefulWidget {
@@ -17,7 +18,9 @@ class _LearnNewWordsState extends State<LearnNewWords> {
         title: Row(
           children: [
             RaisedButton(
-              onPressed: () {},
+              onPressed: () {
+                setState(() {});
+              },
               color: Colors.grey[200],
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10.0)),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reword_flutter_copy/pages/learnNewWords.dart';
 import 'package:syncfusion_flutter_charts/charts.dart';
+import 'ReviewWords.dart';
 import 'categories.dart';
 
 class Learn extends StatefulWidget {
@@ -98,7 +99,10 @@ class _LearnState extends State<Learn> {
                 minWidth: 200.0,
                 height: 75.0,
                 child: RaisedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => ReviewWords()));
+                  },
                   child: Row(
                     children: [
                       Icon(

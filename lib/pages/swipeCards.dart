@@ -97,3 +97,115 @@ class _MyAppState extends State<Card2> {
     );
   }
 }
+
+List<Widget> reviewCard = List.generate(
+  words.length,
+  (int index) {
+    return Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(16.0),
+        boxShadow: [
+          BoxShadow(
+            offset: Offset(0, 17),
+            blurRadius: 23.0,
+            spreadRadius: -13.0,
+            color: Colors.black54,
+          )
+        ],
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(16.0),
+        child: Column(
+          children: [
+            SizedBox(
+              height: 8,
+            ),
+            Text('Memorizing new word'),
+            SizedBox(
+              height: 8,
+            ),
+            Text('${(words[index].dictionary)}'),
+            SizedBox(
+              height: 8,
+            ),
+            Text('${(words[index].title)}'),
+            SizedBox(
+              height: 8,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(16.0),
+              child: Image.network(
+                words[index].image,
+                fit: BoxFit.cover,
+                height: 90,
+                width: 160,
+              ),
+            ),
+            SizedBox(
+              height: 64,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: SizedBox(
+                    width: 75.0,
+                    height: 75.0,
+                    child: RaisedButton(
+                        onPressed: () {}, child: Icon(Icons.keyboard)),
+                  ),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: SizedBox(
+                    width: 75.0,
+                    height: 75.0,
+                    child: RaisedButton(
+                        onPressed: () {}, child: Icon(Icons.remove_red_eye)),
+                  ),
+                ),
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(8.0),
+                  child: SizedBox(
+                    width: 75.0,
+                    height: 75.0,
+                    child: RaisedButton(
+                        onPressed: () {}, child: Icon(Icons.window)),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  },
+);
+
+class ReviewCard extends StatefulWidget {
+  @override
+  _ReviewCardState createState() => _ReviewCardState();
+}
+
+class _ReviewCardState extends State<ReviewCard> {
+  TCardController _controller = TCardController();
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: TCard(
+        cards: reviewCard,
+        size: Size(360, 480),
+        controller: _controller,
+        onForward: (index, info) {
+          print(index);
+        },
+        onBack: (index, info) {
+          print(index);
+        },
+      ),
+    );
+  }
+}
