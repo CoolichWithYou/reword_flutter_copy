@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'about.dart';
+
 class Menu extends StatefulWidget {
   const Menu({Key? key}) : super(key: key);
 
@@ -72,7 +74,12 @@ class MainButton extends StatelessWidget {
     return Column(
       children: [
         TextButton(
-          onPressed: () {},
+          onPressed: () {
+            if (text == 'About') {
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => About()));
+            }
+          },
           child: Row(children: [
             Icon(
               icon,
