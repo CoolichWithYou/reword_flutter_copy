@@ -16,7 +16,7 @@ class About extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          Text("English app"),
+          Text(" English app"),
           SizedBox(height: 16),
           Text("This app helps to effectively memorize English words."),
           SizedBox(height: 16),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:reword_flutter_copy/data/words.dart';
 import 'package:tcard/tcard.dart';
+import 'package:path_provider/path_provider.dart';
 
 // List<String> images = [
 //   'https://vmebel.ru/upload/iblock/2e6/2e61bc0ccd1d3fcd3eebe281541c7ee6.jpg',
@@ -208,4 +209,10 @@ class _ReviewCardState extends State<ReviewCard> {
       ),
     );
   }
+}
+
+Future<String> get _localPath async {
+  final directory = await getApplicationDocumentsDirectory();
+
+  return directory.path;
 }
