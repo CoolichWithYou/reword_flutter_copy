@@ -2,7 +2,7 @@
 
 class Word {
   String dictionary;
-  String image;
+  String image = "assets/default.png";
   String title;
   bool isKnow;
   bool isSwipedOff;

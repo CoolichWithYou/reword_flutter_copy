@@ -25,48 +25,51 @@ List<Widget> cards = List.generate(
       ),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(16.0),
-        child: Align(
-          alignment: Alignment.topCenter,
-          child: Column(
-            children: [
-              SizedBox(
-                height: 8,
-              ),
-              Text('Memorizing new word'),
-              SizedBox(
-                height: 8,
-              ),
-              Text('${(words[index].dictionary)}'),
-              SizedBox(
-                height: 8,
-              ),
-              Text('${(words[index].title)}'),
-              SizedBox(
-                height: 8,
-              ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(16.0),
-                child: Image.network(
-                  words[index].image,
-                  fit: BoxFit.cover,
-                  height: 90,
-                  width: 160,
+        child: Column(
+          children: [
+            SizedBox(
+              height: 8,
+            ),
+            Text('Memorizing new word'),
+            SizedBox(
+              height: 8,
+            ),
+            Text('${(words[index].dictionary)}'),
+            SizedBox(
+              height: 8,
+            ),
+            Text('${(words[index].title)}'),
+            SizedBox(
+              height: 8,
+            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 32.0, top: 8),
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(16.0),
+                  child: Image.asset(
+                    words[index].image,
+                    fit: BoxFit.cover,
+                    height: 90,
+                    width: 160,
+                  ),
                 ),
               ),
-              SizedBox(
-                height: 64,
+            ),
+            SizedBox(
+              height: 64,
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(8.0),
+              child: SizedBox(
+                width: 75.0,
+                height: 75.0,
+                child: RaisedButton(
+                    onPressed: () {}, child: Icon(Icons.remove_red_eye)),
               ),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(8.0),
-                child: SizedBox(
-                  width: 75.0,
-                  height: 75.0,
-                  child: RaisedButton(
-                      onPressed: () {}, child: Icon(Icons.remove_red_eye)),
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
@@ -134,13 +137,19 @@ List<Widget> reviewCard = List.generate(
             SizedBox(
               height: 8,
             ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(16.0),
-              child: Image.network(
-                words[index].image,
-                fit: BoxFit.cover,
-                height: 90,
-                width: 160,
+            Padding(
+              padding: const EdgeInsets.only(left: 32.0, top: 8),
+              child: Align(
+                alignment: Alignment.topLeft,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(16.0),
+                  child: Image.asset(
+                    words[index].image,
+                    fit: BoxFit.cover,
+                    height: 90,
+                    width: 160,
+                  ),
+                ),
               ),
             ),
             SizedBox(
