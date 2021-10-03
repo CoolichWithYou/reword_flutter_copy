@@ -11,54 +11,77 @@ class _AddWordState extends State<AddWord> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[200],
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.black),
         title: Row(
-          children: [],
-        ),
-      ),
-      body: Align(
-        alignment: Alignment.center,
-        child: Column(
           children: [
-            SizedBox(height: 16),
             Container(
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  children: [
-                    TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: 'English word',
+              height: 40.0,
+              width: 40.0,
+              alignment: Alignment.center,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(200.0),
+                image: DecorationImage(
+                    fit: BoxFit.cover, image: AssetImage('assets/myWords.jpg')),
+              ),
+            ),
+            SizedBox(width: 10),
+            Text(
+              'Свои слова',
+              style: TextStyle(color: Colors.black),
+            ),
+          ],
+        ),
+        backgroundColor: Colors.white,
+      ),
+      body: Column(
+        children: [
+          SizedBox(height: 16),
+          Container(
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                children: [
+                  Container(
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(20.0),
+                      child: Column(
+                        children: [
+                          TextField(
+                            decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'English word',
+                                fillColor: Colors.white,
+                                filled: true),
+                          ),
+                          SizedBox(height: 0.5),
+                          TextField(
+                            decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Transcription (optional)',
+                                fillColor: Colors.white,
+                                filled: true),
+                          ),
+                          SizedBox(height: 0.5),
+                          TextField(
+                            decoration: InputDecoration(
+                                border: InputBorder.none,
+                                hintText: 'Translation',
+                                fillColor: Colors.white,
+                                filled: true),
+                          ),
+                        ],
                       ),
                     ),
-                    SizedBox(height: 0.5),
-                    TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: 'Transcription (optional)',
-                      ),
-                    ),
-                    SizedBox(height: 0.5),
-                    TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        hintText: 'Translation',
-                      ),
-                    ),
-                    SizedBox(height: 8),
-                    Container(
+                  ),
+                  SizedBox(height: 16),
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Container(
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(16.0),
-                        boxShadow: [
-                          BoxShadow(
-                            offset: Offset(0, 17),
-                            blurRadius: 23.0,
-                            spreadRadius: -13.0,
-                            color: Colors.black54,
-                          )
-                        ],
                       ),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(16.0),
@@ -70,14 +93,20 @@ class _AddWordState extends State<AddWord> {
                         ),
                       ),
                     ),
-                    SizedBox(height: 8),
-                    TextButton(onPressed: () {}, child: Text("NEW EXAMPLE")),
-                  ],
-                ),
+                  ),
+                  SizedBox(
+                    height: 8,
+                    width: 32,
+                  ),
+                  Align(
+                      alignment: Alignment.topLeft,
+                      child: TextButton(
+                          onPressed: () {}, child: Text("NEW EXAMPLE"))),
+                ],
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
