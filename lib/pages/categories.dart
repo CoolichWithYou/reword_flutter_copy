@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:reword_flutter_copy/pages/addWord.dart';
 
 class Categories extends StatefulWidget {
   const Categories({Key? key}) : super(key: key);
@@ -61,7 +62,10 @@ class _CategoriesState extends State<Categories> {
           color: Colors.blue,
         ),
         child: TextButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => AddWord()));
+          },
           child: Text(
             '+ word',
             style: TextStyle(color: Colors.white, fontSize: 22),
