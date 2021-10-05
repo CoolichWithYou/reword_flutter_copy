@@ -99,9 +99,12 @@ class _AddWordState extends State<AddWord> {
                     width: 32,
                   ),
                   Align(
-                      alignment: Alignment.topLeft,
-                      child: TextButton(
-                          onPressed: () {}, child: Text("NEW EXAMPLE"))),
+                    alignment: Alignment.topLeft,
+                    child: TextButton(
+                      onPressed: () {},
+                      child: Text("NEW EXAMPLE"),
+                    ),
+                  ),
                 ],
               ),
             ),
