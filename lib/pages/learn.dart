@@ -34,6 +34,10 @@ class _LearnState extends State<Learn> {
                 minWidth: 200.0,
                 height: 75.0,
                 child: RaisedButton(
+                  elevation: 0,
+                  hoverElevation: 0,
+                  focusElevation: 0,
+                  highlightElevation: 0,
                   onPressed: () {
                     Navigator.push(
                       context,
@@ -74,6 +78,10 @@ class _LearnState extends State<Learn> {
                 minWidth: 200.0,
                 height: 75.0,
                 child: RaisedButton(
+                  elevation: 0,
+                  hoverElevation: 0,
+                  focusElevation: 0,
+                  highlightElevation: 0,
                   onPressed: () {
                     Navigator.push(
                         context,
@@ -99,6 +107,10 @@ class _LearnState extends State<Learn> {
                 minWidth: 200.0,
                 height: 75.0,
                 child: RaisedButton(
+                  elevation: 0,
+                  hoverElevation: 0,
+                  focusElevation: 0,
+                  highlightElevation: 0,
                   onPressed: () {
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => ReviewWords()));
@@ -122,6 +134,10 @@ class _LearnState extends State<Learn> {
                 minWidth: 200.0,
                 height: 75.0,
                 child: RaisedButton(
+                  elevation: 0,
+                  hoverElevation: 0,
+                  focusElevation: 0,
+                  highlightElevation: 0,
                   shape: RoundedRectangleBorder(
                       borderRadius:
                           BorderRadius.vertical(bottom: Radius.circular(20))),
@@ -154,6 +170,10 @@ class _LearnState extends State<Learn> {
                 minWidth: 200.0,
                 height: 75.0,
                 child: RaisedButton(
+                  elevation: 0,
+                  hoverElevation: 0,
+                  focusElevation: 0,
+                  highlightElevation: 0,
                   shape: RoundedRectangleBorder(
                       borderRadius:
                           BorderRadius.vertical(top: Radius.circular(20))),
@@ -177,6 +197,10 @@ class _LearnState extends State<Learn> {
                 minWidth: 200.0,
                 height: 75.0,
                 child: RaisedButton(
+                  elevation: 0,
+                  hoverElevation: 0,
+                  focusElevation: 0,
+                  highlightElevation: 0,
                   shape: RoundedRectangleBorder(
                       borderRadius:
                           BorderRadius.vertical(bottom: Radius.circular(20))),
